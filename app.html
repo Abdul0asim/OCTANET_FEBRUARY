@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            background-image: url("wallpaperflare.com_wallpaper.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+        }
+
+        header {
+            background-color: #000000; /* Black */
+            color: #8f1d23; /* Netflix red */
+            text-align: center;
+            padding: 1rem;
+            font-size: 150%;
+            font-style: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            mark {
+            background-color: yellow;
+            color: rgb(233, 229, 229);
+            }
+        
+        }
+        
+
+        h2,
+        h3 {
+            color: #e9e9e9; 
+        }
+
+        .form-control,
+        .btn {
+            background-color: #b20710; 
+            color: white;
+        }
+
+        .list-group-item {
+            background-color: #000; /* Black */
+            color: white;
+        }
+
+        #lblsuccess {
+            color: #b20710; 
+        }
+
+        /* Add more styling as needed */
+    </style>
+
+    <script src="app.js"></script>
+
+    <title>To Do List</title>
+</head>
+
+<body>
+    <header>
+        <strong class="font-comic">To Do List</strong>
+    </header>
+
+    <div class="container mt-3">
+        <h2>Add Items</h2>
+
+        <label id="lblsuccess" class="text-success"></label>
+
+        <form id="addForm">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-7">
+                    <input type="text" onkeyup="toggleButton(this, 'submit')" class="form-control" id="item">
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <input type="submit" class="btn btn-dark" id="submit" value="Submit" disabled>
+                </div>
+            </div>
+        </form>
+
+        <h3 class="mt-4">Tasks</h3>
+
+        <ul class="list-group" id="items"></ul>
+    </div>
+</body>
+
+</html>
